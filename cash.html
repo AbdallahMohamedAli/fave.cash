@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Abdallah mohamed Ali">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fave Cash Report</title>
+    <link rel="icon" href="img/fave.png" type="image">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="project">
+        <div id="title">
+            <h2>Fave Cash Report</h2>
+            <img src="img/fave.png" alt="fave" id="logo">
+        </div>
+        
+        <div id="header">
+            
+            <input id="datetime" type="datetime-local" placeholder="تاريح اليوم">
+            <!-- <small id="timeNow"></small> -->
+            <label list="shift" for="shift">الشفت</label>
+            <input  list="shift" name="shi" id="shif" placeholder=" AM / PM ">
+            <datalist id="shift">
+                <option value="AM">
+                <option value="PM">
+            </datalist>
+            
+            <label list="Cashier" for="Cashier">الكاشير</label>
+            <input list="Cashier" name="cash" id="cash" placeholder="اسم الكاشير">
+            <datalist id="Cashier">
+                <option value="أحمد حلمي">
+                <option value="أحمد مصطفى">
+            </datalist>
+        </div>
+
+        <div class="cashflow">
+            <table>
+                <thead>
+                    <tr>
+                        <th>القيمه</th>
+                        <th>العدد</th>
+                        <th>الفئه النقديه</th>
+                        
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="val200" ></td>
+                        <td><input type="number" placeholder="ادخل العدد" onkeyup="cashValue()" id="count200"></td>
+                        <td id="cat200">200</td>
+                    </tr>
+                    <tr>
+                        <td id="val100"></td>
+                        <td><input type="number" placeholder="ادخل العدد" onkeyup="cashValue()" id="count100"></td>
+                        <td id="cat100">100</td>
+                    </tr>
+                    <tr>
+                        <td id="val50"></td>
+                        <td><input type="number" placeholder="ادخل العدد" onkeyup="cashValue()" id="count50"></td>
+                        <td id="cat50">50</td>
+                    </tr>
+                    <tr>
+                        <td id="val20"></td>
+                        <td><input type="number" placeholder="ادخل العدد" onkeyup="cashValue()" id="count20"></td>
+                        <td id="cat20">20</td>
+                    </tr>
+                    <tr>
+                        <td id="val10"></td>
+                        <td><input type="number" placeholder="ادخل العدد" onkeyup="cashValue()" id="count10"></td>
+                        <td id="cat10">10</td>
+                    </tr>
+                    <tr>
+                        <td id="val5"></td>
+                        <td><input type="number" placeholder="ادخل العدد" onkeyup="cashValue()" id="count5"></td>
+                        <td id="cat5">5</td>
+                    </tr>
+                    <tr>
+                        <td id="val1"></td>
+                        <td><input type="number" placeholder="ادخل العدد" onkeyup="cashValue()" id="count1"></td>
+                        <td id="cat1">1</td>
+                    </tr>
+                    <tr>
+                        <td id="sum"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+                
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th><input  onkeyup="getVariance()", id="revenue" type="number" placeholder="قيمة الايراد"></th>
+                        <th>الإيراد</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="expenses"></td>
+                        <td >المصروفات</td>
+                    </tr>
+                    <tr>
+                        <td id="visa"></td>
+                        <td >Visa</td>
+                    </tr>
+                    <tr>
+                        <td id="cashValue"></td>
+                        <td>رصيد النقديه</td>
+                    </tr>
+                    <tr>
+                        <td id="actualCash"></td>
+                        <td>الرصيد الفعلي</td>
+                    </tr>
+                    <tr>
+                        <td id="variance"></td>
+                        <td>فرق الدرج</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="lbl">
+            <h6>إجمالي أوردرات الدليفري</h6>
+            
+            <h6>عدد الأوردرات</h6>
+            
+            <h6>خدمة توصيل عبدالله</h6>
+            
+            <h6>خدمة توصيل مغاوري</h6>
+            
+        </div>
+        <div class="info">
+            
+            <h6 id="totalDelivery"></h6>
+
+            <h6 id="orderCount"></h6>
+            
+            <h6 id="serviceOne"></h6>
+            
+            <h6 id="serviceTwo"></h6>
+        </div>
+        <div class="inputs">
+            
+            <div id="deleviry">
+                <button onclick="addOrder()" id="addord">إضافة اوردر</button>
+                <input id="deliveryName" list="vi" placeholder="اسم الطيار">
+                <datalist id="vi">
+                    <option value="عبدالله">
+                    <option value="مغاوري">
+                    <option value="حالا">
+                    <option value="تيك اواي">
+                </datalist>
+                <input id="check" type="number" placeholder="قيمة الأوردر">
+
+            </div>
+            <div id="visa">
+                <button onclick="addOrderVisa()" id="addvi">إضافة شيك</button>
+                <input id="visaCheck" type="number" placeholder="visa">
+            </div>
+            
+            <div id="expens">
+                <button onclick="addExpenses()" id="addexp">إضافة مصروف</button>
+                <input id="expVal" type="number" placeholder="قيمة">
+                <input id="desc" type="text" placeholder="بيان">
+                <input onchange="getSelectedValue()" list="exp" name="exptype" type="text" placeholder="نوع المصروف" id="ex">
+                <datalist id="exp">
+                    <option value="مشتريات"></option>
+                    <option value="سلفيات"></option>
+                    <option value="CL"></option>
+                    <option value="ضيافه"></option>
+                    <option value="خدمي-بار"></option>                                          
+                    <option value="خدمي-مطبخ"></option>
+                    <option value="شحن كهرباء"></option>
+                    <option value="شحن مياه"></option>
+            </datalist>
+            </div>
+            
+        </div>
+
+        <div class="output">
+            
+            <div id="deliveryTable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th id="dn">اسم الطيار</th>
+                            <th id="dv">القيمه</th>
+                        </tr>
+                    </thead>
+                    <tbody id="deliveryBody">
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div id="visaTable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th id="vv">القيمه</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody id="visaBody">
+                        
+                    </tbody>
+                    
+                </table>
+            </div>
+            <div id="tableE">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th id="value">القيمه</th>
+                            <th id="description">البيان</th>
+                            <th id ="expensesType">نوع المصروف</th>
+                            <th id="receiptNo">رقم</th>
+    
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                        
+                    
+                </table>
+            </div>
+                    
+        </div>
+        <div id="clearAllData">
+            <button id="clearData" onclick="clearData()">إنهاء الشفت</button>
+        </div>
+        
+        
+    </div>
+
+    
+    
+
+
+
+    <script src="main.js" ></script>
+</body>
+</html>

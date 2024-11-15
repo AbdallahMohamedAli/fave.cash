@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: #111;
+    font-family: 'Hacen Tunisia Lt';
+}
+
+
+
+.project {
+    width: 80%;
+    height: 100vh;
+    justify-content: center;
+    margin: auto;    
+}
+button {
+    border-radius: 20px;
+    background: #9452eb;
+    color: #fff;
+    border:none;
+    padding: 5px 5px;
+}
+
+button:hover {
+    background: #111;
+    box-shadow: 0 0 10px #9452eb ;
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+
+#title {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    
+    
+}
+#logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#title h2 {
+    margin: auto;
+    align-content: center;
+    border: none;
+    padding: 20px 10px;
+    color: #f6416c;
+    border-right: 2px #f6416c solid;
+    animation: typing 5s steps(16) infinite;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@keyframes typing {
+    0% {
+        width: 0ch;
+    }
+    25% {
+        width: 5ch;
+    }
+
+    50% {
+        width: 16ch;
+    }
+    100% {
+        width: 0ch;
+    }
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 10px ;
+    /* border: 2px #0f0 solid; */
+    border-radius: 20px;
+    box-shadow: 0 0 10px  #0f0 ;
+    
+    
+}
+#header #datetime {
+    width: fit-content;
+}
+
+.cashflow {
+    display: flex;
+    
+    justify-content: space-evenly;
+    margin: 20px 10px;
+}  
+
+#cashf {
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    font-size: 14px;
+    font-weight: 100;
+    /* width: 50%; */
+    text-align: center;
+    margin: 10px 20px;
+    padding: 10px 5px;
+    border: 2px #f6416c solid;
+    border-spacing: 5px;
+    border-radius: 10px;
+    
+    
+
+}
+th td {
+    padding: 2px;
+}
+
+table input {
+    width: 80px;
+    text-align: center;
+}
+
+
+.inputs {
+    width: 100%;
+    margin:auto;
+    padding: 0px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px  #0f0 ;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+input {
+    text-align:center ;
+    outline: none;
+    border: 2px #f6416c solid;
+    width: 90px;
+    height: 30px;
+    background: #000;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.output {
+    margin:10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 1px;
+    
+}
+.output table {
+    width: fit-content;
+}
+
+table #vv {
+    border-radius:2px #f6416c solid ;
+}
+
+
+
+.info {
+    margin: 20px 10px;
+    padding: 10px;
+    display:flex;
+    justify-content: space-evenly;
+}
+.lbl {
+    margin: 20px 10px;
+    padding: 10px;
+    display:flex;
+    justify-content: space-evenly;
+    
+}
+
+.lbl h6 {
+    font-weight: 100;
+    
+
+}
+.info h6 {
+    font-weight: 100;
+    font-size: 14px;
+    
+    color:#f6416c ;
+
+}
+
+table thead th {
+    font-weight: 100;
+    color:#fd8da7 ;
+}
+
+#clearAllData {
+    display: flex;
+    justify-content: center;
+}
+
+#clearData {
+    width: 50%;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 400;
+}
